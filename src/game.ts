@@ -40,9 +40,10 @@ function spawnCube(x: number, y: number, z: number) {
 function spawnZcash(x: number, y: number, z: number) {
     // create the entity
     const zcash = new Entity()
-
+    const randomz = Math.random() * 4 + 1
     // add a transform to the entity
-    zcash.addComponent(new Transform({ position: new Vector3(x, y, z), scale: new Vector3(4, 4, 4) }))
+
+    zcash.addComponent(new Transform({ position: new Vector3(x, y, z), scale: new Vector3(randomz, randomz, randomz) }))
 
     // add a shape to the entity
     //cube.addComponent(new BoxShape())
@@ -83,6 +84,6 @@ export function addZcash() {
 
 addZcash()*/
 
-for (let i = 0; i < 30; i++) {
-    spawnZcash(Math.random() * 8 + 1, Math.random() * 8, Math.random() * 8 + 1)
+for (let i = 0; i < 180; i++) {
+    spawnZcash(Math.random() * 16 + 1, Math.random() * 16, Math.random() * 16 + 1)
 }
