@@ -22,19 +22,36 @@ engine.addSystem(new RotatorSystem())
 /// --- Spawner function ---
 
 function spawnCube(x: number, y: number, z: number) {
-  // create the entity
-  const cube = new Entity()
+    // create the entity
+    const cube = new Entity()
 
-  // add a transform to the entity
-  cube.addComponent(new Transform({ position: new Vector3(x, y, z) }))
+    // add a transform to the entity
+    cube.addComponent(new Transform({ position: new Vector3(x, y, z)}))
 
-  // add a shape to the entity
-  cube.addComponent(new BoxShape())
+    // add a shape to the entity
+    cube.addComponent(new BoxShape())
 
-  // add the entity to the engine
-  engine.addEntity(cube)
+    // add the entity to the engine
+    engine.addEntity(cube)
 
-  return cube
+    return cube
+}
+
+function spawnZcash(x: number, y: number, z: number) {
+    // create the entity
+    const zcash = new Entity()
+
+    // add a transform to the entity
+    zcash.addComponent(new Transform({ position: new Vector3(x, y, z), scale: new Vector3(4, 4, 4) }))
+
+    // add a shape to the entity
+    //cube.addComponent(new BoxShape())
+    zcash.addComponent(new GLTFShape('models/zcash.gltf'))
+
+    // add the entity to the engine
+    engine.addEntity(zcash)
+
+    return zcash
 }
 
 /// --- Spawn a cube ---
@@ -46,6 +63,26 @@ cube.addComponent(
     cube.getComponent(Transform).scale.z *= 1.1
     cube.getComponent(Transform).scale.x *= 0.9
 
-    spawnCube(Math.random() * 8 + 1, Math.random() * 8, Math.random() * 8 + 1)
+    spawnZcash(Math.random() * 8 + 1, Math.random() * 8, Math.random() * 8 + 1)
   })
 )
+
+/* --- add zcash model
+
+export function addZcash() {
+    let zcash = new Entity()
+    zcash.addComponent(new GLTFShape('models/zcash.gltf'))
+    zcash.addComponent(
+        new Transform({
+            rotation: Quaternion.Euler(0, 180, 0),
+            position: new Vector3(0, 0, 0)
+        })
+    )
+    engine.addEntity(zcash)
+}
+
+addZcash()*/
+
+for (let i = 0; i < 30; i++) {
+    spawnZcash(Math.random() * 8 + 1, Math.random() * 8, Math.random() * 8 + 1)
+}
