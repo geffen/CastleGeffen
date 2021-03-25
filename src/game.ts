@@ -68,22 +68,35 @@ cube.addComponent(
   })
 )
 
-/* --- add zcash model
+ //--- add mushroom model and placement
 
-export function addZcash() {
-    let zcash = new Entity()
-    zcash.addComponent(new GLTFShape('models/zcash.gltf'))
-    zcash.addComponent(
+export function addMushroom(x:number,y:number,z:number) {
+    let mushroom = new Entity()
+    mushroom.addComponent(new GLTFShape('models/mushroom.glb'))
+    mushroom.addComponent(
         new Transform({
-            rotation: Quaternion.Euler(0, 180, 0),
-            position: new Vector3(0, 0, 0)
+            //rotation: Quaternion.Euler(0, -180, 0),
+            position: new Vector3(x,y,z)
+            scale: new Vector3(.5,.5,.5)
         })
     )
-    engine.addEntity(zcash)
+    engine.addEntity(mushroom)
 }
 
-addZcash()*/
+// put mushrooms in the center of the 3 plots
+addMushroom(16, 0, 16)
+addMushroom(16, 0, 48)
+addMushroom(48, 0, 48)
+
+//make a bunch zcash everywhere
 
 for (let i = 0; i < 180; i++) {
-    spawnZcash(Math.random() * 16 + 1, Math.random() * 16, Math.random() * 16 + 1)
+    spawnZcash(Math.random() * 16 + 8, Math.random() * 16, Math.random() * 16 + 8)
 }
+for (let i = 0; i < 180; i++) {
+    spawnZcash(Math.random() * 16 + 8, Math.random() * 16, Math.random() * 16 + 40)
+}
+for (let i = 0; i < 180; i++) {
+    spawnZcash(Math.random() * 16 + 40, Math.random() * 16, Math.random() * 16 + 40)
+}
+
