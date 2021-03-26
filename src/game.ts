@@ -1,5 +1,6 @@
 /// --- Set up a system ---
 
+
 class RotatorSystem {
   // this group will contain every entity that has a Transform component
   group = engine.getComponentGroup(Transform)
@@ -21,7 +22,7 @@ engine.addSystem(new RotatorSystem())
 
 /// --- Spawner function ---
 
-function spawnCube(x: number, y: number, z: number) {
+function spawnOrigCube(x: number, y: number, z: number) {
     // create the entity
     const cube = new Entity()
 
@@ -47,7 +48,7 @@ function spawnZcash(x: number, y: number, z: number) {
 
     // add a shape to the entity
     //cube.addComponent(new BoxShape())
-    zcash.addComponent(new GLTFShape('models/zcash.gltf'))
+    zcash.addComponent(new GLTFShape('models/zcash.glb'))
 
     // add the entity to the engine
     engine.addEntity(zcash)
@@ -55,14 +56,14 @@ function spawnZcash(x: number, y: number, z: number) {
     return zcash
 }
 
-/// --- Spawn a cube ---
+/// --- Spawn a cube, renamed to not conflict with floor.ts ---
 
-const cube = spawnCube(8, 1, 8)
+const OrigCube = spawnOrigCube(8, 1, 8)
 
-cube.addComponent(
+OrigCube.addComponent(
   new OnClick(() => {
-    cube.getComponent(Transform).scale.z *= 1.1
-    cube.getComponent(Transform).scale.x *= 0.9
+      OrigCube.getComponent(Transform).scale.z *= 1.1
+      OrigCube.getComponent(Transform).scale.x *= 0.9
 
     spawnZcash(Math.random() * 8 + 1, Math.random() * 8, Math.random() * 8 + 1)
   })
