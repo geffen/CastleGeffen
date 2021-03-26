@@ -76,7 +76,7 @@ export function addMushroom(x:number,y:number,z:number) {
     mushroom.addComponent(
         new Transform({
             //rotation: Quaternion.Euler(0, -180, 0),
-            position: new Vector3(x,y,z)
+            position: new Vector3(x,y,z),
             scale: new Vector3(.5,.5,.5)
         })
     )
