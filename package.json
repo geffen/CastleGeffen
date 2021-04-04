@@ -15,5 +15,8 @@
   },
   "dependencies": {
     "@dcl/noise-utils": "^1.0.11"
-  }
+  },
+  "bundleDependencies": [
+    "@dcl/noise-utils"
+  ]
 }

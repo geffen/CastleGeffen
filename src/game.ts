@@ -12,7 +12,7 @@ class RotatorSystem {
       const transform = entity.getComponent(Transform)
 
       // mutate the rotation
-      transform.rotate(Vector3.Up(), dt * 10)
+      //transform.rotate(Vector3.Up(), dt * 10)
     }
   }
 }
@@ -58,7 +58,7 @@ function spawnZcash(x: number, y: number, z: number) {
 
 /// --- Spawn a cube, renamed to not conflict with floor.ts ---
 
-const OrigCube = spawnOrigCube(8, 1, 8)
+/*const OrigCube = spawnOrigCube(8, 1, 8)
 
 OrigCube.addComponent(
   new OnClick(() => {
@@ -67,7 +67,7 @@ OrigCube.addComponent(
 
     spawnZcash(Math.random() * 8 + 1, Math.random() * 8, Math.random() * 8 + 1)
   })
-)
+)*/
 
  //--- add mushroom model and placement
 
@@ -85,6 +85,7 @@ export function addMushroom(x:number,y:number,z:number) {
 }
 
 // put mushrooms in the center of the 3 plots
+/*
 addMushroom(16, 0, 16)
 addMushroom(16, 0, 48)
 addMushroom(48, 0, 48)
@@ -100,4 +101,29 @@ for (let i = 0; i < 180; i++) {
 for (let i = 0; i < 180; i++) {
     spawnZcash(Math.random() * 16 + 40, Math.random() * 16, Math.random() * 16 + 40)
 }
+*/
 
+
+function spawnTower(x: number, y: number, z: number, scalex: number, scaley: number, scalez: number, rotatex: number) {
+    // create the entity
+    const tower = new Entity()
+    // add a transform to the entity
+    tower.withCollisions = true
+    tower.addComponent(new Transform({ position: new Vector3(x, y, z), scale: new Vector3(scalex, scaley, scalez), rotation: Quaternion.Euler(0, rotatex, 0) }))
+
+    // add a shape to the entity
+    //cube.addComponent(new BoxShape())
+    tower.addComponent(new GLTFShape('models/centerCastle.gltf'))
+
+    // add the entity to the engine
+    engine.addEntity(tower)
+
+    return tower
+}
+
+
+//Spawn terraforming project to dwarf neighbors.
+
+spawnTower(16, 0, 48, 0.5, 0.4, 0.7, 0)
+spawnTower(48, 0, 48, 0.5, 0.4, 0.7, 90)
+spawnTower(16, 0, 16, 0.5, 0.4, 0.7, 180)

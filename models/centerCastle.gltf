@@ -1,0 +1,177 @@
+{
+    "asset": {
+        "copyright": "2020 (c) Adobe Inc.",
+        "generator": "Adobe Dimension - a39c749b7f1dd68e8fcb597e3575f0bb9d09bfc8",
+        "version": "2.0"
+    },
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5126,
+            "count": 1820085,
+            "type": "VEC3",
+            "max": [
+                3.309267282485962,
+                1.8190653324127198,
+                1.9827842712402344
+            ],
+            "min": [
+                -1.9662871360778809,
+                -2.531686305999756,
+                -1.0000367164611817
+            ]
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 1820085,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5126,
+            "count": 1820085,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5125,
+            "count": 1820085,
+            "type": "SCALAR",
+            "max": [
+                1820084.0
+            ],
+            "min": [
+                0.0
+            ]
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 21841020,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 21841020,
+            "byteLength": 21841020,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 43682040,
+            "byteLength": 14560680,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 58242720,
+            "byteLength": 7280340,
+            "target": 34963
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 65523060,
+            "uri": "centerCastle_binary.bin"
+        }
+    ],
+    "cameras": [
+        {
+            "perspective": {
+                "znear": 0.003907147329300642,
+                "yfov": 0.6024156808853149,
+                "zfar": 214.89312744140626,
+                "aspectRatio": 1.3333333730697632
+            },
+            "type": "perspective",
+            "name": "render_camera"
+        }
+    ],
+    "materials": [
+        {
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.304987370967865,
+                    0.304987370967865,
+                    0.304987370967865,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.7071067690849304
+            },
+            "name": "01 - Default",
+            "doubleSided": true
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Box163",
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TEXCOORD_0": 2
+                    },
+                    "indices": 3,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "translation": [
+                17.133289337158204,
+                0.2999951243400574,
+                23.574159622192384
+            ],
+            "rotation": [
+                -0.12059047073125839,
+                0.379409521818161,
+                0.04995020851492882,
+                0.9159756302833557
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                0.9999999403953552
+            ],
+            "camera": 0,
+            "name": "render_camera_n3d"
+        },
+        {
+            "translation": [
+                -7.654205322265625,
+                60.45493698120117,
+                -3.692697763442993
+            ],
+            "rotation": [
+                -0.7071067690849304,
+                -1.256073797219464e-14,
+                1.256073797219464e-14,
+                0.7071067690849304
+            ],
+            "scale": [
+                11.398836135864258,
+                10.363707542419434,
+                60.45271301269531
+            ],
+            "mesh": 0,
+            "name": "Box163"
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0,
+                1
+            ],
+            "name": "scene"
+        }
+    ],
+    "scene": 0
+}
