@@ -3,6 +3,10 @@
     "outFile": "./bin/game.js",
     "allowJs": true,
     "paths": {
+      "@dcl/ecs-scene-utils": [
+        "node_modules/@dcl/ecs-scene-utils/dist/index.d.ts",
+        "node_modules\\@dcl\\ecs-scene-utils\\dist\\index.d.ts"
+      ],
       "@dcl/noise-utils": [
         "node_modules/@dcl/noise-utils/dist/index.d.ts",
         "node_modules\\@dcl\\noise-utils\\dist\\index.d.ts"

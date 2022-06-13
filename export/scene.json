@@ -1,0 +1,61 @@
+{
+  "display": {
+    "title": "CastleGeffen",
+    "description": "",
+    "navmapThumbnail": "",
+    "favicon": "favicon_asset"
+  },
+  "contact": {
+    "name": "Geffenz 'n Jux",
+    "email": ""
+  },
+  "owner": "",
+  "scene": {
+    "parcels": [
+      "136,-144",
+      "136,-143",
+      "136,-142",
+      "136,-141",
+      "137,-144",
+      "137,-143",
+      "137,-142",
+      "137,-141",
+      "138,-141",
+      "138,-142",
+      "139,-141",
+      "139,-142"
+    ],
+    "base": "136,-144"
+  },
+  "communications": {
+    "type": "webrtc",
+    "signalling": "https://signalling-01.decentraland.org"
+  },
+  "policy": {
+    "contentRating": "E",
+    "fly": true,
+    "voiceEnabled": true,
+    "blacklist": []
+  },
+  "requiredPermissions": [
+    "ALLOW_TO_MOVE_PLAYER_INSIDE_SCENE"
+  ],
+  "main": "bin/game.js",
+  "tags": ["CastleGeffen"],
+  "spawnPoints": [
+    {
+      "name": "spawn1",
+      "default": true,
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "cameraTarget": {
+        "x": 16,
+        "y": 16,
+        "z": 8
+      }
+    }
+  ]
+}

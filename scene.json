@@ -1,15 +1,12 @@
 {
   "display": {
-    "title": "CastleGeffen",
-    "description": "",
-    "navmapThumbnail": "",
-    "favicon": "favicon_asset"
+    "title": "CastleGeffen"
   },
   "contact": {
-    "name": "Geffenz 'n Jux",
+    "name": "Geffen",
     "email": ""
   },
-  "owner": "",
+  "owner": "Geffen",
   "scene": {
     "parcels": [
       "136,-144",
@@ -47,15 +44,15 @@
       "name": "spawn1",
       "default": true,
       "position": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "cameraTarget": {
-        "x": 8,
+        "x": 16,
         "y": 1,
         "z": 8
+      },
+      "cameraTarget": {
+        "x": 16,
+        "y": 16,
+        "z": 16
       }
-    }
+	}
   ]
 }
